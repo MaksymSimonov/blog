@@ -1,15 +1,20 @@
 {
   "compilerOptions": {
+    "target": "es6",
     "module": "commonjs",
-    "declaration": true,
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "baseUrl": "./",
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "es2017",
     "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true
-  }
+    "lib": ["es2015"],
+    "paths": {
+      "@post/*": ["src/post/*"],
+      "@shared/*": ["src/shared/*"],
+      "@user/*": ["src/user/*"]
+    }
+  },
+  "exclude": ["node_modules"]
 }
